@@ -1,0 +1,14 @@
+function rbs(arr, val, start = 0, end = arr.length - 1){
+    var mid = math.floor((start +  end)/2);
+    if (end < start){
+        return -1;
+    }
+    if(arr[mid] == val){
+        return mid;
+    } else if (arr[mid] < val){
+        return rbs(arr, val, mid, end);
+    } else if(arr[mid] > val){
+        return rbs(arr, val, start, mid);
+    }
+
+}
